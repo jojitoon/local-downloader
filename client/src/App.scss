@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.group {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.file,
+.folder {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: bold;
+  text-transform: capitalize;
+  hyphens: auto;
+  cursor: pointer;
+  color: gray;
+  background: rgb(221, 221, 221);
+  background: radial-gradient(
+    circle,
+    rgba(221, 221, 221, 1) 0%,
+    rgba(208, 207, 207, 1) 35%,
+    rgba(177, 177, 177, 1) 100%
+  );
+
+  &:hover {
+    background: #ddd;
+  }
+}
+
+.folder {
+  background: yellow;
+  color: black;
+
+  &:hover {
+    background: orange;
+  }
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.downloader {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 24px;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 100px;
+  align-items: center;
+  span {
+    background: blueviolet;
+    padding: 7px 10px;
+    margin: 5px;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      background: darken(blueviolet, 20);
+    }
+  }
+}
+
+button {
+  background: blueviolet;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+    background: darken(blueviolet, 20);
+  }
+}
